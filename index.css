@@ -88,31 +88,7 @@ body{
     flex-direction: column;
 }
 
-/* Nav bar */ 
 
-.navbar{
-    height: 125px;
-    display: flex;
-    align-items: center;
-    font-family: 'grottabold';
-}
-
-nav{
-    flex: 1;
-    text-align: right;
-}
-
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-right: 60px;
-    
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: white;
-}
 
 /* Page index */ 
 
@@ -127,7 +103,7 @@ nav ul li a{
 
 .marque span {
     font-weight: 700;
-    color: #f3f7a8;
+    color: white;
     font-size: 28em;
     text-transform: uppercase;
     display: inline-block;

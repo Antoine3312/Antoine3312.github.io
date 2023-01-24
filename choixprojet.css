@@ -1,0 +1,109 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+@font-face {
+    font-family: 'grottabold';
+    src: url('font/grotta-bold-webfont.woff2') format('woff2'),
+         url('font/grotta-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottalight';
+    src: url('font/grotta-light-webfont.woff2') format('woff2'),
+         url('font/grotta-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottamedium';
+    src: url('font/grotta-medium-webfont.woff2') format('woff2'),
+         url('font/grotta-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottaregular';
+    src: url('font/grotta-regular-webfont.woff2') format('woff2'),
+         url('font/grotta-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottasemibold';
+    src: url('font/grotta-semibold-webfont.woff2') format('woff2'),
+         url('font/grotta-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+
+
+.choix1{
+    background: #545453;
+    flex: 1;
+}
+
+.choix2{
+    background: #4c4c4c;
+    flex: 1;
+
+}
+.choix3{
+    background: #454342;
+    flex: 1;
+}
+.choix4{
+    background: #3c3c3b;
+    flex: 1;
+}
+
+.choix{
+    height: 100%;
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    font-family: 'grottabold';
+} 
+
+h2{
+    position: absolute;
+    bottom: 7%;
+    right: 10%;
+    writing-mode: vertical-rl;
+    font-family: 'grottalight';
+}
+
+@media (max-width: 1250px) { 
+    body{
+        flex-direction: column;
+    }
+
+    h1{
+        top: 10%;
+        left: 5%;
+    }
+
+    h2 {
+        bottom: 10%;
+        right: 5%;
+        writing-mode: horizontal-tb;
+    }
+}
