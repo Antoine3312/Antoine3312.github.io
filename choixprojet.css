@@ -48,32 +48,29 @@ body{
     display: flex;
     justify-content: center;
     color: white;
-    
+    overflow-x: hidden;
 }
 
 
 .choix1{
     background: #545453;
-    flex: 1;
 }
 
 .choix2{
     background: #4c4c4c;
-    flex: 1;
-
 }
 .choix3{
     background: #454342;
-    flex: 1;
 }
 .choix4{
     background: #3c3c3b;
-    flex: 1;
 }
 
 .choix{
     height: 100%;
     position: relative;
+    transition-duration: .5s;
+    flex: 1;
 }
 
 h1{
@@ -81,6 +78,7 @@ h1{
     top: 7%;
     left: 10%;
     font-family: 'grottabold';
+    font-size: 4vmax;
 } 
 
 h2{
@@ -89,7 +87,41 @@ h2{
     right: 10%;
     writing-mode: vertical-rl;
     font-family: 'grottalight';
+    font-size: 1.5vmax;
 }
+
+
+.discover_card{
+    font-family: 'grottamedium';
+    position: absolute;
+    top: 7%;
+    right: 15%;
+    visibility: hidden;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+
+    
+}
+
+.discover_card:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.discover_card:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+    
 
 @media (max-width: 1250px) { 
     body{
