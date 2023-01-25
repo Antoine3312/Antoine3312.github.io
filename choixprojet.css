@@ -79,6 +79,7 @@ h1{
     left: 10%;
     font-family: 'grottabold';
     font-size: 4vmax;
+    transition: .1s;
 } 
 
 h2{
@@ -88,21 +89,33 @@ h2{
     writing-mode: vertical-rl;
     font-family: 'grottalight';
     font-size: 1.5vmax;
+    transition: .5s;
 }
 
+
+.menu{
+    width: 70%;
+    height: 70%;
+    background: red;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
 
 .discover_card{
     font-family: 'grottamedium';
     position: absolute;
-    top: 7%;
+    top: 10%;
     right: 15%;
     visibility: hidden;
+    opacity: 0;
     display: inline-block;
     color: white;
     text-decoration: none;
-
-    
+    font-size: 2vmax;
+    transition: .5s;
 }
+
 
 .discover_card:after {
     content: '';
@@ -137,5 +150,17 @@ h2{
         bottom: 10%;
         right: 5%;
         writing-mode: horizontal-tb;
+    }
+
+    .menu{
+        left: 25%;
+        top: 5%;
+        background: blue;
+    }
+
+    .discover_card{
+        top: 87%;
+        right: 80%;
+        left: 5%;
     }
 }
