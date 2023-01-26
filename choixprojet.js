@@ -87,6 +87,7 @@ function retireMenuH1(titre1, titre2, discover_card, menu){
     discover_card.style.opacity='0';
     discover_card.style.visibility = "hidden";
 
+    menu.style.opacity='0';
     menu.style.visibility = 'hidden';
 }
 
@@ -101,5 +102,6 @@ function afficheMenuH1(titre1, titre2, discover_card, menu){
     discover_card.style.opacity='1';
     discover_card.style.visibility = "visible";
 
+    menu.style.opacity='1';
     menu.style.visibility = 'visible';
 }

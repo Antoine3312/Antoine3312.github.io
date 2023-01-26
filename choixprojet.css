@@ -51,6 +51,10 @@ body{
     overflow-x: hidden;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 .choix1{
     background: #545453;
@@ -96,11 +100,29 @@ h2{
 .menu{
     width: 70%;
     height: 70%;
-    background: red;
+    /* background: red; */
     position: absolute;
     top: 20%;
     left: 10%;
+    padding: 5%;
+    opacity: 0;
+    visibility: hidden;
 }
+
+h3{
+    font-family: 'grottalight';
+    margin:10%;
+    font-size: 2vmax;
+    color: aliceblue;
+    transition: .2s;
+}
+
+h3:hover{
+    color: #f3f7a8;
+    transition: .2s;
+}
+
+
 
 .discover_card{
     font-family: 'grottamedium';
@@ -155,7 +177,6 @@ h2{
     .menu{
         left: 25%;
         top: 5%;
-        background: blue;
     }
 
     .discover_card{

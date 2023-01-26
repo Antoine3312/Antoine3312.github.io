@@ -1,0 +1,28 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background: black;
+}
+
+.projet1{
+    width: 100%;
+    height: 100vh;
+    background: red;
+}
+
+.projet2{
+    width: 100%;
+    height: 100vh;
+    background: blue;
+}
+
+.projet3{
+    width: 100%;
+    height: 100vh;
+    background: purple;
+}
