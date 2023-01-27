@@ -48,7 +48,7 @@ body{
     display: flex;
     justify-content: center;
     color: white;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 a{
@@ -176,7 +176,7 @@ h3:hover{
 
     .menu{
         left: 25%;
-        top: 5%;
+        top: 20%;
     }
 
     .discover_card{
