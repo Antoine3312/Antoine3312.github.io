@@ -2,16 +2,98 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    z-index: 2;
 }
+
+@font-face {
+    font-family: 'grottabold';
+    src: url('font/grotta-bold-webfont.woff2') format('woff2'),
+         url('font/grotta-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottalight';
+    src: url('font/grotta-light-webfont.woff2') format('woff2'),
+         url('font/grotta-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottamedium';
+    src: url('font/grotta-medium-webfont.woff2') format('woff2'),
+         url('font/grotta-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottaregular';
+    src: url('font/grotta-regular-webfont.woff2') format('woff2'),
+         url('font/grotta-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'grottasemibold';
+    src: url('font/grotta-semibold-webfont.woff2') format('woff2'),
+         url('font/grotta-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'osbourne_promedium';
+    src: url('font/osbournepro-medium-webfont.woff2') format('woff2'),
+         url('font/osbournepro-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'osbourne_proregular';
+    src: url('font/osbournepro-regular-webfont.woff2') format('woff2'),
+         url('font/osbournepro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'osbourne_problack';
+    src: url('font/osbournepro-black-webfont.woff2') format('woff2'),
+         url('font/osbournepro-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'osbourne_probold';
+    src: url('font/osbournepro-bold-webfont.woff2') format('woff2'),
+         url('font/osbournepro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'osbourne_prolight';
+    src: url('font/osbournepro-light-webfont.woff2') format('woff2'),
+         url('font/osbournepro-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body{
     background: black;
     overflow-x: hidden;
 }
 
-.projet{
-    z-index: -1;
+
+
+svg{
+    z-index: 1;
+} 
+
+h1{
+    font-size: 4vmax;
+    font-family: 'grottaregular';   
+    color: white;
     
 }
 
@@ -20,35 +102,98 @@ body{
 .projet1{
     width: 100%;
     height: 100vh;
-    background: #3c3c3b;
+    background: #3D3D3D;
     /* display: flex;
     justify-content: center;
     align-items: center; */
     position: relative;
 }
 
+.projet1 h1{
+    position: absolute;
+    top: 7%;
+    left: 5%;
+}
+
+
+
 .fond1{
     position: absolute;
     bottom: 0;
-    
 }
 
 .projet2{
     width: 100%;
     height: 100vh;
-    background: blue;
+    background: #373737;
     position: relative;
+}
+
+.projet2 h1{
+    position: absolute;
+    top: 7%;
+    right: 5%;
 }
 
 .fond2{
     position: absolute;
-    top: 100vh; 
+    top: 0; 
     transform: rotate(180deg);
 }
+
+.fond3{
+    position: absolute;
+    bottom: 0;
+}
+
 
 
 .projet3{
     width: 100%;
     height: 100vh;
-    background: purple;
+    background: #323232;
+    position: relative;
+}
+
+.fond4{
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.projet3 h1{
+    position: absolute;
+    top: 7%;
+    left: 5%;
+}
+
+.discover_card{
+    font-family: 'grottamedium';
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 2vmax;
+    transition: .5s;
+}
+
+
+.discover_card:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.discover_card:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
