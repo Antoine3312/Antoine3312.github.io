@@ -273,14 +273,23 @@ h1{
 .item-5{
     grid-column: span 3;
     grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carrousel{
-    width: 80%;
-    height: 80%;
+
+    /* width: 50vw;
+    height: 50vw;
+    max-height: 100%;
+    max-width: auto; */
     background: red;
-    
+    width: 80%;
+    height: auto;
 }
+
+
 
 .projet2{
     width: 100%;
@@ -329,6 +338,10 @@ h1{
 }
 
 @media (max-width: 1200px) {
+   
+}
+
+@media (max-width: 600px) {
     .wrapper{
         gap: 0.3rem;
         width: 95%;
@@ -356,10 +369,10 @@ h1{
         grid-template-columns: repeat(4,1fr);
     }
 
-    .item-5{
-        min-height: 100%;
-    }
+    
 }
+
+
 
 @media (max-width: 500px) {
     .traitNoirP2{
