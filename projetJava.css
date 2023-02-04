@@ -82,6 +82,7 @@
 body{
     background: black;
     /* overflow-x: hidden; */
+    min-width: fit-content;
 }
 
 
@@ -99,7 +100,7 @@ h1{
 
 
 
-/**/
+/* ================== PROJET DAILYBANK ================== */
 
 
 .projet1{
@@ -171,6 +172,7 @@ h1{
 }
 .wrapper{
     font-family: 'grottalight';
+    
 }
 
 
@@ -184,6 +186,7 @@ h1{
     /* display: flex;
     justify-content: center;
     align-items: center; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .item-1{
@@ -194,6 +197,7 @@ h1{
     flex-direction: column;
     text-align: center;
 }
+
 
 
 .item-2{
@@ -267,6 +271,7 @@ h1{
     /* margin-left: 50px; */
 }
 
+
 .item-5{
     grid-column: span 3;
     grid-row: span 2;
@@ -319,7 +324,7 @@ h1{
     height: 20px;
     display: flex;
     justify-content: space-between;
-
+    color: #fff;
 }
 
 .choix{
@@ -345,7 +350,7 @@ h1{
 
 
 
-
+/* ================== PROJET JEU DE BLACKJACK ================== */
 
 
 
@@ -363,18 +368,149 @@ h1{
     color: black;
 }
 
-.fond2{
+.container-p2{
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.wrapper-p2{
+    margin-bottom: 2%;
+    margin-left: 5%;
+    padding: 10px 0 10px  10px ;
+    /* background: blue; */
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'grottalight';
+}
+
+.wrapper-p2 h2{
+    font-size: 1.4vmax;
+}
+
+.wrapper-p2 p{
+    font-size: 1vmax;
+    margin-top: 1em;
+}
+
+.wrapper-p2 li{
+    font-size: 1vmax;
+}
+
+
+.grid-items-p2{
+    /* background: #fff; */
+    background-color:rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 3%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.item-1-p2{
+    grid-row: 1;
+    border-bottom-right-radius: 50px;
+}
+.item-2-p2{
+
+    grid-row: 2;
+    border-bottom-left-radius: 50px;
+    text-align: center;
+}
+.item-3-p2{
+
+    grid-row: 3;
+    border-top-right-radius: 50px;
+    
+}
+.item-3-p2 h3{
+    font-size: 1.2vmax;
+}
+.grille-equipe-duree-p2{
+    width: inherit;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    /* background: orange; */
+
+}
+.duree{
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+
+.equipe{
+    width: 100%;
+    height: 100%;
+    /* background: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.equipe img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.item-4-p2{
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+    grid-column: span 2;
+    grid-row: span 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.item-4-p2 h2{
+    position: absolute;
+    top: 1em;
+}
+
+
+
+
+/* .fond2{
     position: absolute;
     top: 0; 
     transform: rotate(180deg);
-}
+} */
 
 .fond3{
     position: absolute;
     bottom: 0;
 }
 
-
+/* ================== PROJET DEV APP ================== */
 
 .projet3{
     width: 100%;
@@ -395,6 +531,9 @@ h1{
     left: 5%;
 }
 
+
+/* ================== Responsive ================== */
+
 @media (max-width: 1200px) {
     .projet1 h2{
         font-size: 2vmax;
@@ -402,6 +541,9 @@ h1{
     .projet1 p{
         font-size: 1.5vmax;
         margin-top: 1vmax;
+    }
+    .item-4 li{
+        font-size: 1.3vmax;
     }
 }
 
@@ -436,10 +578,57 @@ h1{
     .item-4 h2{
         font-size: 1.5vmax;
     }
-    .item-4 p{
+    .item-4 li{
         font-size: 1.3vmax;
     }
     
+    .wrapper-p2{
+        padding: 10px 10px 10px  10px ;
+        margin-left: 0;
+    }
+    .wrapper-p2 h2{
+        font-size: 1.5vmax;
+    }
+    
+    .wrapper-p2 p{
+        font-size: 1.3vmax;
+        margin-top: 1em;
+    }
+    
+    .wrapper-p2 li{
+        font-size: 1.3vmax;
+    }
+
+
+    .item-1-p2{
+        grid-row: 1;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 10%;
+    }
+    .item-2-p2{
+        grid-row: 1;
+        text-align: center;
+        padding: 10%;
+    }
+    .item-3-p2{
+        grid-row: 1;
+        padding: 10%;
+    }
+    .item-3-p2 img{
+        width: 70%;
+    }
+    .item-4-p2{
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    .grille-equipe-duree-p2{
+        height: 100%;
+    }
     
 }
 
@@ -452,12 +641,15 @@ h1{
     
 }
 
-/* .hidden{
+
+/* ================== Annimation ================== */
+
+.hidden{
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
-} */
+}
 
 .show{
     opacity: 1;
@@ -479,6 +671,16 @@ h1{
 }
 .grid-items:nth-child(5){
     transition-delay: 500ms;
+}
+
+.grid-items-p2:nth-child(1){
+    transition-delay: 100ms;
+}
+.grid-items-p2:nth-child(2){
+    transition-delay: 200ms;
+}
+.grid-items-p2:nth-child(3){
+    transition-delay: 300ms;
 }
 
 

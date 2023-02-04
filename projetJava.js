@@ -23,43 +23,37 @@ const btnChoix1 = document.getElementsByClassName('choix1')[0];
 const btnChoix2 = document.getElementsByClassName('choix2')[0];
 const btnChoix3 = document.getElementsByClassName('choix3')[0];
 const btnChoix4 = document.getElementsByClassName('choix4')[0];
-const slideElement = document.getElementsByClassName('slide');
 
 
-var positions = [0, 100, 200, 300]
+
 var elementActif = 0
 
-console.log(slide1)
-
-// document.styleSheets[0].cssRules[0].style.removeProperty("transform");
-// slide1.style.transform = '';
-// slide1.style.transform = "translateX(-200%);"
 
 
 
 btnChoix1.addEventListener('click', (e) => {
-    updateCarousselle(slide1);
+    updateCarousselle(slide1, slides);
 });
 btnChoix2.addEventListener('click', (e) => {
-    updateCarousselle(slide2);
+    updateCarousselle(slide2, slides);
 });
 btnChoix3.addEventListener('click', (e) => {
-    updateCarousselle(slide3);
+    updateCarousselle(slide3, slides);
 });
 btnChoix4.addEventListener('click', (e) => {
-    updateCarousselle(slide4);
+    updateCarousselle(slide4, slides);
 });
 
 
-function updateCarousselle(slideChoisi){
+function updateCarousselle(slideChoisi, positionSlide){
 
     gsap.to(".slide", {
-        x : () => -slideChoisi.offsetWidth*slides.indexOf(slideChoisi)-10,
+        x : () => -slideChoisi.offsetWidth*positionSlide.indexOf(slideChoisi)-10,
         duration : .5
     });
 
     setTimeout(function() {
-        elementActif = slides.indexOf(slideChoisi);
+        elementActif = positionSlide.indexOf(slideChoisi);
     }, 500);
     
 }
