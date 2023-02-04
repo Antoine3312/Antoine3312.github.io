@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.container{
+/* .container{
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -172,7 +172,7 @@ span::before{
     color: #fff;
     font-size: 12px;
     padding: 0 1em;
-}
+} */
 
 /* @media (max-width: 900px) {
     .nav{
@@ -195,3 +195,48 @@ span::before{
         display: none;
     }
 } */
+
+
+
+
+
+.slider{
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    white-space: nowrap;
+
+}
+
+.circle{
+    background: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.slide-1{
+    background: url("./image/J_B_accueil.png") no-repeat center;  
+}
+
+.slide-2{
+    background: url("./image/J_B_connexion.png") no-repeat center;
+}
+
+.slide-3{
+    background: url("./image/J_B_gestionClient.png") no-repeat center;
+}
+
+.slide-4{
+    background: url("./image/J_B_gestionEmployé.png") no-repeat center;
+}
+
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: contain;
+    display: inline-block;
+}
+
