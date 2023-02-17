@@ -648,9 +648,9 @@ h1{
 
 .transition{
     width: 50%;
-    height: 20%;
+    height: 15%;
     /* background: #D2434D; */
-    background: #001220;
+    background: #fff;
     position: absolute;
     top: 240vh;
     right: 0;
@@ -660,21 +660,15 @@ h1{
     transition: .5s all;
 
     padding: 20px 0 20px 20px ;
-    
+    /* box-shadow: 2px 4px 12px rgb(0 0 0 / 8%); */
+    border-bottom-left-radius: 50px;
     
 }
 
 .transition:hover{
     transition: .5s all;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.transition h1{
-    color: #fff;
-    font-size: 1.5vmax;
-    position: absolute;
-    right: 3%;
-    top: 5%;
+    
 }
 
 .quote{
@@ -685,7 +679,34 @@ h1{
     height: auto;
 }
 
+.transition h1{
+    color: #063254;
+    font-size: 1.5vmax;
+    position: absolute;
+    right: 10%;
+    top: 5%; 
+}
 
+
+.transition-2{
+    width: 30%;
+    height: 7%;
+    /* background: #D2434D; */
+    background: #D2434D;
+    position: absolute;
+    top: 325vh;
+    right: 0;
+    z-index: 11;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1%;
+}
+
+.transition-2 h1{
+    font-size: 1.8vmax;
+    color: #fff;
+    font-family: 'grottabold';
+    margin-top: 3%;
+}
 
 
 .fond5{
@@ -693,15 +714,58 @@ h1{
     bottom: 0;
 }
 
+.fond6{
+    position: absolute;
+    top: -5%;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
 .projet3-partie2{
     width: 100%;
     height: 100vh;
-    /* background: red; */
-    background: #323232;
+    background: #001220;
+    /* background: #323232; */
+
     position: relative;
-    z-index: 1;
-    
+    z-index: 1; 
+    padding: 3%;
 }
+
+.projet3-partie2 h2{
+    font-size: 1.8vmax;
+    color: #fff;
+    font-family: 'grottabold';
+    margin-top: 5%;
+}
+
+.explication-projet{
+    padding: 1%;
+    /* background: blue; */
+    width: 40%;
+    /* height: 50%; */
+    margin-top: 10px;
+
+    font-size: 1.3vmax;
+    color: #fff;
+    font-family: 'grottalight';
+    display: flex;
+    justify-content: center;
+}
+.explication-technique{
+    padding: 1%;
+    width: 40%;
+    height: 50%;
+    margin-top: 10px;
+    /* background: blue; */
+
+    font-size: 1.3vmax;
+    color: #fff;
+    font-family: 'grottalight';
+}
+
+
 .projet3-partie3{
     width: 100%;
     height: 100vh;
@@ -716,14 +780,25 @@ h1{
 }
 
 .projet3-partie3 h2{
-    color: #fff;
+    color: #000;
     font-family: 'grottabold';
-    font-size: 1.5vmax;
+    font-size: 2vmax;
+    background: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+}
+
+.fond7{
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .wrapper-p3{
     width: 80%;
-    height: 90%;
+    height: 80%;
     /* background: rebeccapurple; */
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -745,9 +820,25 @@ h1{
     position: relative;
 }
 
+.explication-img-1{
+    visibility: hidden;
+    background: red;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
 .grid-items-p3:hover .img-container{
     background: #063254;
 }
+
+.grid-items-p3:hover .explication-img-1{
+    visibility: visible;
+}
+
+
 
 .grid-items-p3 h2{
     font-size: 1vmax;
