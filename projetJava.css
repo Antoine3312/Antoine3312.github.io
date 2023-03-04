@@ -995,7 +995,7 @@ h1{
 
 @media (max-width: 800px) {
     .retourAccueil{
-        width: 50px;
+        width: 80px;
         height: 20px;
     }
     .wrapper{
