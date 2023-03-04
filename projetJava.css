@@ -961,10 +961,9 @@ h1{
     .item-4 li{
         font-size: 1.3vmax;
     }
-    .transition-2{
-        top: 325vh;
-        width: 80%;
-    }
+
+    
+    
 }
 
 @media (max-width: 800px) {
@@ -1055,7 +1054,10 @@ h1{
         width: 95%;
         gap: .5rem;
     }
-
+    .transition-2{
+        top: 322vh;
+        width: 80%;
+    }
     
 }
 
