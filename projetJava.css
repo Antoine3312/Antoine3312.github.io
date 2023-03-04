@@ -671,6 +671,34 @@ h1{
     
 }
 
+.content-transi{
+    /* background: red; */
+    height: 80%;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.content-transi h2{
+    font-size: 1.4vmax;
+    font-family: 'grottabold';
+}
+
+.content-transi p{
+    font-size: 1.2vmax;
+    font-family: 'grottalight';
+}
+
+.content-transi-1 h2{
+    margin: 10px;
+}
+
 .quote{
     position: absolute;
     right: 0;
@@ -689,16 +717,18 @@ h1{
 
 
 .transition-2{
-    width: 30%;
+    width: 45%;
     height: 7%;
     /* background: #D2434D; */
     background: #D2434D;
     position: absolute;
-    top: 325vh;
+    top: 315vh;
     right: 0;
     z-index: 11;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1%;
+
+    border-top-left-radius: 50px;
 }
 
 .transition-2 h1{
@@ -706,6 +736,29 @@ h1{
     color: #fff;
     font-family: 'grottabold';
     margin-top: 3%;
+    margin-left: 3%;
+}
+
+.wrapper-transi{
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.transi-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'grottalight';
+}
+.transi-item-equipe img{
+    border-radius: 50px;
+}
+
+.transi-item-temps{
+    width: 30%;
 }
 
 
@@ -830,13 +883,13 @@ h1{
 
 
 
-.grid-items-p3:hover .img-container{
+/* .grid-items-p3:hover .img-container{
     background: #063254;
 }
 
 .grid-items-p3:hover .explication-img-1{
     visibility: visible;
-}
+} */
 
 
 
@@ -907,6 +960,10 @@ h1{
     }
     .item-4 li{
         font-size: 1.3vmax;
+    }
+    .transition-2{
+        top: 315vh;
+        width: 80%;
     }
 }
 
@@ -999,9 +1056,7 @@ h1{
         gap: .5rem;
     }
 
-    .transition-2{
-        top: 315vh;
-    }
+    
 }
 
 
