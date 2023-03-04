@@ -80,8 +80,9 @@
 
 
 body{
-    background: #D2434D;
-
+    background: #fbfbfd;
+    overflow-x: hidden;
+    min-width: fit-content;
     position: relative;
 }
 
@@ -90,7 +91,7 @@ body{
     right: 0;
     margin: 2%;
     z-index: 999999999;
-    width: 200px;
+    width: 120px;
     height: 40px;
     border-radius: 5px;
     background: #000;
@@ -100,9 +101,14 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     color: #fff;
     transition: all .8s;
+    
+}
+
+a{
     text-decoration: none;
-    font-size: 1.2vmax;
+    font-size: 1vmax;
     font-family: 'grottabold';
+    
 }
 
 .retourAccueil:hover{
@@ -111,95 +117,148 @@ body{
 }
 
 
-.content{
-    height: 100vh;
-}
-
-
-
-
-.fond1{
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    transform: rotate(180deg);
-}
-
-.fond2{
-    position: absolute;
-    bottom: 0;
-}
-
-h1{
-    font-family: 'osbourne_prolight';
-    font-size: 6vmax;
-    font-weight: 900;
-    color: #fbfbfd;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0);
-    top: 10px;
-    z-index: 11;
-}
-
-.content1{
+.header{
+    /* background: #7C7C7C; */
     width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+.header h1{
+    font-family: 'grottabold';
+    font-size: 4vmax;
+    /* color: #fff; */
+}
 
-    height: 80%;
-    background: #fbfbfd;
+.content{
     position: absolute;
-    top: 15vh;
+    top: 75px;
+    /* background: red; */
+    width: 100%;
+    height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_bd{
+    width: 40%;
+    height: 90%;
+    /* background: blue; */
+    background: url("./image/S_B_schémaConceptuel.png") no-repeat center;
+    background-size: contain;
+    /* border: 1px solid */
+    border-radius: 20px;
+}
+
+.explication{
+    width: 50%;
+    height: 90%;
+    /* background: white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.descr{
+    background: white;
+    width: 80%;
+    height: 45%;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+    text-align: justify;
+    text-justify: inter-word;
+
+    display: flex;
+    transition: .7s all;
+}
+
+.descr:hover{
+    transform: scale(1.01);
+    transition: .7s all;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contenu{
+    width: 80%;
+    height: 100%;
+}
+.transi{
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to left, #E9E6E6, #fff);
+}
+.nom{
+    width: 10%;
+    height: 100%;
+    background: #E9E6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'grottabold';
+    writing-mode: vertical-rl;
+    font-size: 1.5vmax;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.contenu{
+    padding: 2%;
+    font-family: 'grottalight';
+    font-size: 1.2vmax;
+    position: relative;
+}
+.temps-equipe{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+
+}
+.item_temps-equipe{
+    width: 50%;
+    height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    position: relative;
-
-    
+}
+.item_temps-equipe img{
+    width: 50%;
 }
 
-
-
-.description_projet{
-    width: 65%;
+.contenu_rendu{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
-    gap: 1em;
-    font-family: 'grottalight';
-    font-size: 2vmax;
-}
-
-.description_projet a{
-    color: #000;
-    transition: .3s all;
-}
-.description_projet a:hover{
-    background: white;
-    color: #D2434D;
-    transition: .3s all;
-    font-size: 2.1vmax;
 }
 
 
-@media (max-width: 800px) {
-    .description_projet{
-        font-size: 3vmax;
+@media (max-width: 800px){
+    .content{
+        flex-direction: column;
     }
 
-    h1{
-        font-size: 4vmax;
-        top: 25px;
+    .explication{
+        width: 95%;
+        height: 50%;
     }
+    .img_bd{
+        width: 95%;
+        height: 50%;
+    }
+
 
     .retourAccueil{
         width: 50px;
         height: 20px;
     }
+
+    .item_temps-equipe img{
+        width: 20%;
+    }
 }
-
-
