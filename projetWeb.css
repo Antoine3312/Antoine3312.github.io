@@ -190,6 +190,15 @@ h1{
     background-size: contain;
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+
+
+    .description h3{
+        font-size: 1.5vmax;
+    }
+    .description p{
+        font-size: 1vmax;
+    }
+}
 
 
