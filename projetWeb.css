@@ -265,6 +265,13 @@ a{
         width: 80px;
         height: 20px;
     }
+
+    .page{
+        height: 200px;
+    }
+    .content_descr{
+        height: 300px;
+    }
 }
 
 
