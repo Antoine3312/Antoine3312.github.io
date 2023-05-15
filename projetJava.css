@@ -5,6 +5,8 @@
     z-index: 2;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
 @font-face {
     font-family: 'grottabold';
     src: url('font/grotta-bold-webfont.woff2') format('woff2'),
@@ -79,14 +81,145 @@
 }
 
 :root{
-    --text-bg-color:#fbfbfd;
-    --image-bg-color: #fff;
+    --text-bg-color:#fff;
+    --image-bg-color: #d9d9d9;
 }
 
 body{
-    width: 100%;
-    height: 100vh;
+    overflow: hidden;
 }
+
+button{
+    background: var(--text-bg-color);
+    border: none;
+    padding: 5px 15px 5px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: 'grottabold';
+    animation: slow-appear 1s .1s cubic-bezier( 0.57, 0.01, 0.75, 0.06 ) both;
+    position: fixed;
+    z-index: 10000000;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.first_title{
+    position: fixed;
+    top: 50px;
+    left: 30px;
+    z-index: 10000;
+    font-family: Roboto, Arial, serif;
+}
+.first_title_inline_left{
+    display: inline-block;
+    animation: text-appear 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+
+}
+.first_title_inline_right{
+    display: inline-block;
+    animation: text-appear 1s .2s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.arrow{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 10000000;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-size: contain;
+}
+.arrow:hover{
+    cursor: pointer;
+}
+
+.arrow_left{
+    left: 1%;
+    background-image: url("./image/icons8-chevron-gauche-96.png");
+    animation: slow-appear 1s .3s cubic-bezier( 0.57, 0.01, 0.75, 0.06 ) both;
+}
+
+.arrow_right{
+    right: 1%;
+    background-image: url("./image/icons8-chevron-droit-96.png");
+    animation: slow-appear 1s .3s cubic-bezier( 0.57, 0.01, 0.75, 0.06 ) both;
+}
+
+
+.project-1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.container_img{
+    width: 50%;
+    height: inherit;
+    background: var(--image-bg-color);
+}
+
+.container_txt{
+    width: 50%;
+    height: inherit;
+    background: var(--text-bg-color);
+}
+
+@keyframes raiseText {
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@keyframes text-appear {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+
+
+@keyframes slow-appear {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+.project-2{
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: relative;
+}
+
+.project-3{
+    width: 100%;
+    height: 100%;
+    background: blue;
+    position: relative;
+}
+
+.content{
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+}
+
+
+
 
 /* ====== SLIDER ====== */
 /* 
