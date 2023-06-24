@@ -212,6 +212,7 @@ button:hover{
 
 
 .container_txt{
+    position: relative;
     width: 50%;
     height: inherit;
     background: var(--text-bg-color);
@@ -219,16 +220,13 @@ button:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5vh;
+    gap: 10vh;
 }
 
 .txt_stack{
-    height: 50vh;
-    background: rebeccapurple;
+    height: 30vh;
+    /* background: rebeccapurple; */
     width: 90%;
-
-    /* display: grid;
-    grid-template-columns: repeat(10, 1fr); */
 }
 
 .bar{
@@ -244,13 +242,80 @@ button:hover{
 }
 .java{
     width: 70%;
+    position: relative;
+}
+.java::before{
+    content: "JAVA";
+    position: absolute;
+    top: -100%;
+    font-family: Roboto, Arial, serif;
 }
 .web{
+    position: relative;
     width: 20%;
+}
+.web::before{
+    content: "Oracle SQL";
+    position: absolute;
+    top: -100%;
+    font-family: Roboto, Arial, serif;
 }
 .sql{
     width: 10%;
+    position: relative;
 }
+.sql::before{
+    content: "JAVA";
+    position: absolute;
+    top: -100%;
+    font-family: Roboto, Arial, serif;
+}
+
+.stack_pourcent{
+    position: relative;
+    /* background: red; */
+    display: flex;
+    height: 30%;
+}
+.title_java,.title_web,.title_sql{
+    font-family: 'osbourne_problack';
+}
+
+.title_java{
+    font-size: 10vh;
+    flex: 7;
+}
+.title_web{
+    font-size: 5vh; 
+    flex: 2;
+}
+.title_sql{
+    font-size: 3vh;
+    flex: 1;
+}
+
+.number{
+    font-size: 10vh;
+    position: relative;
+}
+
+.title_java::after,
+.title_web::after,
+.title_sql::after{
+    content: '%';
+    font-family: 'grottabold';
+}
+
+.title_java::after{
+    font-size: 3vh;
+}
+.title_web::after{
+    font-size: 2vh;
+}
+.title_sql::after{
+    font-size: 1.5vh;
+}
+
 
 
 .txt_team{
@@ -260,6 +325,10 @@ button:hover{
     position: relative;
     height: 10vh;
     width: 60%;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .pic{
@@ -283,7 +352,7 @@ button:hover{
     font-size: var(--fs-t);
     font-family: 'grottamedium';
     position: absolute;
-    bottom: -30px;
+    top: -30px;
 }
 
 
