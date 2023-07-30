@@ -149,6 +149,7 @@ function changePannel(positionOfSlider){
         x: -1*(positionOfSlider-1)*(document.getElementById('content').offsetWidth/3),
         duration : .3
     })
+
 }
 
 function updateAffichageBoutton(){
