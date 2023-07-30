@@ -92,7 +92,7 @@
     --fs-h3: 1em;
     --fs-pourcent-70: 5em;
     --fs-pourcent-30: 3em;
-    --fs-navbar-title: 1.3em;
+    --fs-navbar-title: 1em;
     --fs-navbar-items: 2em;
     
     --ls-first-t: -0.05em;
@@ -136,7 +136,6 @@ body{
 .nav_items:hover{
     animation-fill-mode: backwards;
 }
-
 .nav_items > a {
     text-decoration: none;
     color: inherit;
@@ -145,6 +144,24 @@ body{
     float: left;
     font-family: 'grottabold';
     font-size: var(--fs-navbar-title);
+}
+
+.nav_items_projects:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.nav_items_projects:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 
@@ -168,11 +185,11 @@ button:hover{
 
 .first_title_inline_left{
     display: inline-block;
-    animation: text-appear 1.3s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation: textAppearFromBottom 1.3s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 .first_title_inline_right{
     display: inline-block;
-    animation: text-appear 1.3s .2s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation: textAppearFromBottom 1.3s .2s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .arrow{
@@ -192,15 +209,15 @@ button:hover{
 .arrow_left{
     left: 1%;
     background-image: url("./image/icons8-chevron-gauche-96.png");
-    /* animation: slow-appear 1s .3s cubic-bezier( 0.57, 0.01, 0.75, 0.06 ) both; */
-    animation: animateArrowLeft 1.2s infinite ease-out alternate;
+    animation: animateArrowLeft 1.2s infinite ease-out alternate, 
+    fadeIn 1s .3s cubic-bezier( 0.57, 0.01, 0.75, 0.06 ) both;
 }
 
 .arrow_right{
     right: 1%;
     background-image: url("./image/icons8-chevron-droit-96.png");
-    /* animation: slow-appear 1s .3s cubic-bezier( 0.57, 0.01, 0.75, 0.06 ) both; */
-    animation: animateArrowRight 1.2s infinite ease-out alternate;
+    animation: animateArrowRight 1.2s infinite ease-out alternate, 
+    fadeIn 1s .8s cubic-bezier( 0.57, 0.01, 0.75, 0.06 ) both;
 }
 
 .content{
@@ -236,6 +253,8 @@ button:hover{
     height: 65%;
     background: url("./image/J_B_accueil_fond_blanc.png") no-repeat center;
     background-size: contain;
+    opacity: 0;
+    animation: fadeIn 1s .4s forwards;
 }
 
 
@@ -255,6 +274,8 @@ button:hover{
     align-items: center;
     flex-direction: column;
     gap: 10vh;
+    opacity: 0;
+    animation: fadeIn 1.5s .7s forwards;
 }
 
 .txt_stack{
@@ -373,18 +394,7 @@ button:hover{
 }
 
 
-@keyframes raiseText {
-    0%{
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 100;
-    }
-}
-
-@keyframes text-appear {
+@keyframes textAppearFromBottom {
     from {
       clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
     }
@@ -392,17 +402,6 @@ button:hover{
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
   }
-
-
-
-@keyframes slow-appear {
-    from{
-        opacity: 0;
-    }
-    to {
-        opacity: 100;
-    }
-}
 
 @keyframes animateArrowRight{
     from{
@@ -426,7 +425,16 @@ button:hover{
         opacity: 100%;
     }
     to{
-        opacity: 70%;
+        opacity: 55%;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
     }
 }
 
@@ -443,89 +451,3 @@ button:hover{
     background: blue;
     position: relative;
 }
-
-
-/* ====== SLIDER ====== */
-/* 
-.grid-items{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: #001220;
-    width: 50%;
-    height: 50%;
-    color: white;
-    border-radius: 10px;
-    padding: 5%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.slider{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    
-}
-
-.slide-1{
-    background: url("./image/J_B_accueil.png") no-repeat center;
-}
-
-.slide-2{
-    background: url("./image/J_B_connexion.png") no-repeat center;
-}
-
-.slide-3{
-    background: url("./image/J_B_gestionClient.png") no-repeat center;
-}
-
-.slide-4{
-    background: url("./image/J_B_gestionEmployé.png") no-repeat center;
-}
-
-.slide{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-size: contain;
-    display: inline-block;
-}
-
-.choix-slider{
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 5px;
-    width: 25%;
-    height: 20px;
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-}
-
-.choix{
-    background: transparent;
-    width: 23%;
-    height: 100%;
-    border: 2px solid #fff;
-    border-radius: 5px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s all;
-}
-
-
-.choix:hover{
-    background: #fff;
-    color: #001220;
-    transition: .3s all;
-} */
-
-
