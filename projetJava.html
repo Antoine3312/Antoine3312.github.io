@@ -11,13 +11,31 @@
     <title>Portfolio</title>
 </head>
 <body>
-
+    
     <ul class="navbar">
         <li class="nav_items nav_title"><a href="./index.html">Portfolio d'Antoine MAZEAU</a></li>
         <li class="nav_items nav_items_projects"><a href="./projetSql.html">SQL.</a></li>
         <li class="nav_items nav_items_projects"><a href="./projetPython.html">Python.</a></li>
         <li class="nav_items nav_items_projects"><a href="./projetWeb.html">Web.</a></li>
         <li class="nav_items nav_items_projects"><a href="./projetJava.html">Java.</a></li>
+
+        <img src="./svg/menu_open.svg" alt="icon open menu" class="menu_icon open_menu" id="open_menu" onclick="showMenu()">
+        <img src="./svg/menu_close.svg" alt="icon close menu" class="menu_icon close_menu" id="close_menu" onclick="closeMenu()">
+        <div class="menu_deroulant" id="menu_deroulant">
+            <div class="container_menu container_menu_left">
+                <h1>Portfolio d'Antoine MAZEAU</h1>
+                <ul class="menu_deroulant_content_left">
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetJava.html">Java.</a></li>
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetWeb.html">Web.</a></li>
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetPython.html">Python.</a></li>
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetSql.html">SQL.</a></li>
+                </ul>
+            </div>
+            <div class="container_menu container_menu_right">
+                
+                <h1>Qui suis-je ?</h1>
+            </div>
+        </div>
     </ul>
 
     <div class="arrow arrow_left"></div>
