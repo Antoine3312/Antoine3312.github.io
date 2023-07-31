@@ -81,9 +81,7 @@ function showMenu(){
     choices_menu_deroulant[2].style.visibility = "visible";
     choices_menu_deroulant[3].style.visibility = "visible";
 
-    // whoami.style.visibility = "visible";
     titre_menu_deroulant.style.visibility = "visible";
-    
 }
 
 function closeMenu(){
@@ -95,11 +93,9 @@ function closeMenu(){
     choices_menu_deroulant[1].style.animation = "textDisappearFromTop .1s .2s cubic-bezier(0.5, 0, 0.1, 1) both";
     choices_menu_deroulant[2].style.animation = "textDisappearFromTop .1s .1s cubic-bezier(0.5, 0, 0.1, 1) both";
     choices_menu_deroulant[3].style.animation = "textDisappearFromTop .1s 0s cubic-bezier(0.5, 0, 0.1, 1) both";
-
-
+    
     whoami.style.animation = "fadeOut .2s  forwards"
 
-    // whoami.style.visibility = "hidden";
     titre_menu_deroulant.style.visibility = "hidden";
 }
 
