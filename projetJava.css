@@ -477,6 +477,15 @@ button:hover{
     }
   }
 
+@keyframes textDisappearFromTop {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+}
+
 @keyframes animateArrowRight{
     from{
         transform: translateX(0);
@@ -511,6 +520,33 @@ button:hover{
         opacity: 100;
     }
 }
+@keyframes fadeOut{
+    from{
+        opacity: 100;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes menuFadeIn {
+    from{
+        height: 0%;
+    }
+    to{
+        height: 100vh;
+    }
+}
+@keyframes menuFadeOut {
+    from{
+        height: 100vh;
+    }
+    to{
+        height: 0%;
+    }
+}
+
+@keyframes KEYFRAME_RELOADER{}
 
 .project-2{
     width: 100%;
