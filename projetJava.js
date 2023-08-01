@@ -50,6 +50,8 @@ function updateAffichageBoutton(){
 updateAffichageBoutton()
 
 
+
+
 // menu
 
 const open_menu_icon = document.getElementById('open_menu');
@@ -59,7 +61,7 @@ const choices_menu_deroulant = document.getElementsByClassName('menu_deroulant_p
 const whoami = document.getElementById('whoami')
 const titre_menu_deroulant = document.getElementById('titre_menu_deroulant')
 
-console.log(titre_menu_deroulant);
+
 
 function showMenu(){
     open_menu_icon.style.visibility = "hidden";
@@ -108,3 +110,4 @@ function closeMenu(){
 //         open_menu_icon.style.visibility = "visible";
 //     }
 // });
+
