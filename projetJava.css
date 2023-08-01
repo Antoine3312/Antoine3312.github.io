@@ -271,7 +271,7 @@ button:hover{
 
 .first_title{
     position: absolute;
-    top: calc(var(--navbar-height) + 30px);
+    top: 30px;
     left: 30px;
     font-family: Roboto, Arial, serif;
     font-size: var(--fs-heading);
@@ -323,7 +323,8 @@ button:hover{
 
 .content{
     width: 300%;
-    height: 100vh;
+    margin-top: var(--navbar-height);
+    height: calc(100vh - var(--navbar-height));
     min-height: 500px;
     position: fixed;
     display: flex;
@@ -343,8 +344,7 @@ button:hover{
 
 .container_img{
     width: 50%;
-    margin-top: var(--navbar-height);
-    height: calc(100% - var(--navbar-height)); 
+    height: 100%;
     background: var(--image-bg-color);
     position: relative;
     display: flex;
@@ -367,8 +367,7 @@ button:hover{
 .container_txt{
     position: relative;
     width: 50%;
-    margin-top: var(--navbar-height);
-    height: calc(100% - var(--navbar-height));
+    height: 100%;
     background: inherit;
     gap: 10vh;
     opacity: 0;
@@ -469,7 +468,6 @@ button:hover{
     bottom: 50px;
     left: 50%;
     transform: translate(-50%, 0);
-    /* background: orange; */
 }
 
 .pic{
@@ -521,7 +519,6 @@ button:hover{
     .txt_team{
         width: 50%;
         height: 15%;
-        bottom: 20px;
     }
 
     .java::before, .web::before{
@@ -546,6 +543,8 @@ button:hover{
         right: 10px;
     }
 }
+
+
 
 
 @keyframes textAppearFromBottom {
