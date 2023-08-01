@@ -94,6 +94,9 @@
     --fs-pourcent-30: 3em;
     --fs-navbar-title: 1em;
     --fs-navbar-items: 2em;
+    --fs-smenu-choice: 6em;
+    --fs-smenu-h1: 2em;
+    --fs-smenu-h2: 1.2em;
     
     --ls-first-t: -0.05em;
 
@@ -161,7 +164,6 @@ a{
     content: "Portfolio d'Antoine MAZEAU";
     position: absolute;
     width: fit-content;
-    border: 1px dashed red;
     color: black;
 }
 
@@ -223,26 +225,27 @@ a{
     top: 50%;
     transform: translate(0,-50%);
     font-family: 'grottabold';
-    font-size: 6em;
+    font-size: var(--fs-smenu-choice);
 }
 
-.container_menu_left > h1{
+.container_menu_left > h2{
     position: absolute;
     top: 40px;
-    font-size: 1.2em;
+    font-size: var(--fs-smenu-h2);
     font-family: 'grottalight';
 }
 .container_menu_right > h1{
     position: absolute;
     right: 50px;
-    bottom: 100px;
-    font-size: 2em;
+    bottom: 40px;
+    font-size: var(--fs-smenu-h1);
     font-family: 'grottamedium';
 }
 
 .menu_deroulant_project_items{
     position: relative;
     width: fit-content;
+    letter-spacing: -0.01em;
 }
 
 
@@ -256,13 +259,34 @@ a{
 
 
 }
-@media (max-width: 650px) {
+@media (max-width: 680px) {
     .container_menu{
         padding-left: 40px;
     }
     .container_menu_right > h1{
         bottom: 20px;
     }
+    .menu_icon{
+        right: 10px;
+    }
+
+    .container_menu_right > h1{
+        right: 10px;
+    }
+
+    .nav_title{
+        position: absolute;
+        left: 0;
+    }
+
+}
+@media (max-width: 550px) {
+    :root{
+        --fs-smenu-choice: clamp(3em, 2em + 10vw, 5em);
+        --fs-smenu-h1: 1.2em;
+        --fs-smenu-h2: 1em;
+    }
+
 }
 
 button:hover{
@@ -377,7 +401,6 @@ button:hover{
 .txt_stack{
     height: 30vh;
     width: 90%;
-    /* background: red; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -400,7 +423,7 @@ button:hover{
     position: relative;
 }
 .java::before{
-    content: "JAVA";
+    content: "JAVA / JAVAFX";
     position: absolute;
     top: -100%;
     font-family: Roboto, Arial, serif;
@@ -468,6 +491,7 @@ button:hover{
     bottom: 50px;
     left: 50%;
     transform: translate(-50%, 0);
+
 }
 
 .pic{
@@ -532,15 +556,29 @@ button:hover{
     
 
     .nav_title{
-        position: absolute;
-        left: 0;
+        width: 90%;
     }
     .nav_title::before{
         content: 'Application Bancaire';
     }
 
-    .menu_icon{
-        right: 10px;
+    :root{
+        --fs-navbar-title: clamp(15px, 10px + 3vw, 40px);
+    }
+
+}
+
+@media (max-width: 500px) {
+    .txt_stack{
+        top: 120px;
+    }
+
+    .txt_team{
+        width: 80%;
+    }
+
+    :root{
+        --fs-h2: 1em;
     }
 }
 
