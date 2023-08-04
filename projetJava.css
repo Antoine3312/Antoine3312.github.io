@@ -161,7 +161,7 @@ a{
     color: white;
 }
 .nav_title::before{
-    content: "Portfolio d'Antoine MAZEAU";
+    content: "A propos de moi";
     position: absolute;
     width: fit-content;
     color: black;
@@ -278,8 +278,8 @@ a{
         position: absolute;
         left: 0;
     }
-
 }
+
 @media (max-width: 550px) {
     :root{
         --fs-smenu-choice: clamp(3em, 2em + 10vw, 5em);

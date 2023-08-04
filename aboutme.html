@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutme.css">
+    <script defer src="aboutme.js" ></script>
+    <title>Document</title>
+</head>
+<body>
+    <ul class="navbar">
+        <a href="./index.html"><li class="nav_items nav_title">.</li></a>
+        <li class="nav_items nav_items_projects"><a href="./projetSql.html">SQL.</a></li>
+        <li class="nav_items nav_items_projects"><a href="./projetPython.html">Python.</a></li>
+        <li class="nav_items nav_items_projects"><a href="./projetWeb.html">Web.</a></li>
+        <li class="nav_items nav_items_projects"><a href="./projetJava.html">Java.</a></li>
+
+        <img src="./svg/menu_open.svg" alt="icon open menu" class="menu_icon open_menu" id="open_menu" onclick="showMenu()">
+        <img src="./svg/menu_close.svg" alt="icon close menu" class="menu_icon close_menu" id="close_menu" onclick="closeMenu()">
+        <div class="menu_deroulant" id="menu_deroulant">
+            <div class="container_menu container_menu_left">
+                <h2 id="titre_menu_deroulant">Portfolio d'Antoine MAZEAU</h2>
+                <ul class="menu_deroulant_content_left" id="menu_deroulant_content_left">
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetJava.html">Java.</a></li>
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetWeb.html">Web.</a></li>
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetPython.html">Python.</a></li>
+                    <li class="menu_deroulant_project_items" id="menu_deroulant_project_items"><a href="./projetSql.html">SQL.</a></li>
+                </ul>
+            </div>
+            <div class="container_menu container_menu_right">
+                <h1 id="whoami">A propos de moi</h1>
+            </div>
+        </div>
+    </ul>
+
+
+</body>
+</html>
