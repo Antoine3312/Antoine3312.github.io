@@ -18,6 +18,24 @@ fleche_gauche.addEventListener('click', (e) => {
     updateAffichageBoutton()
 });
 
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            if(positionOfSlider>1){
+                positionOfSlider --;
+                changePannel(positionOfSlider);
+                updateAffichageBoutton()
+            }
+            break;
+        case 39:
+            if(positionOfSlider<3){
+                positionOfSlider ++;
+                changePannel(positionOfSlider);
+                updateAffichageBoutton()
+            }
+            break;
+    }
+};
 
 const projets = [
     document.getElementById('p1'),
@@ -110,4 +128,5 @@ function closeMenu(){
 //         open_menu_icon.style.visibility = "visible";
 //     }
 // });
+
 
