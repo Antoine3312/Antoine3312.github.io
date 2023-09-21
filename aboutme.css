@@ -362,7 +362,7 @@ a{
 
 .card:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.005);
+    /* transform: scale(1.005); */
     transition: .4s;
 }
 
@@ -372,4 +372,5 @@ a{
         transform: none;
     }
 }
+
 
