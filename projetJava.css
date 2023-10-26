@@ -167,6 +167,13 @@ a{
     color: black;
 }
 
+.nav_title_home{
+    position: relative;
+    float: left;
+    font-family: 'grottabold';
+    font-size: var(--fs-navbar-title);
+}
+
 .nav_items_projects:after, .menu_deroulant_project_items:after {
     content: '';
     position: absolute;
@@ -351,7 +358,8 @@ button:hover{
     margin-top: var(--navbar-height);
     height: calc(100vh - var(--navbar-height));
     min-height: 500px;
-    position: fixed;
+    /* DISABLE SCROLLING */
+    position: fixed; 
     display: flex;
     object-fit: contain;
 
@@ -587,6 +595,9 @@ button:hover{
     .nav_title::before{
         content: 'Application Bancaire';
     }
+    .nav_title_home{
+        visibility: hidden;
+    }
 
     :root{
         --fs-navbar-title: clamp(15px, 10px + 3vw, 40px);
@@ -696,7 +707,35 @@ button:hover{
     height: inherit;
     background: red;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.first_title_p2{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-family: Roboto, Arial, serif;
+    font-size: var(--fs-heading);
+    letter-spacing: var(--ls-first-t);
+    font-weight: var(--fw-heading);
+
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+
+    padding-left: 50px;
+    z-index: 3;
+}
+
+.test{
+    height: 100px;
+    width: 100px;
+    background: orange;
+
+}
+
 
 .project-3{
     width: 100%;
